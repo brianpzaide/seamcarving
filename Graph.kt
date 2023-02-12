@@ -72,15 +72,6 @@ class Edge(v1: Vertex, v2: Vertex, var weight: Double) {
     var vertex1: Vertex = v1
     var vertex2: Vertex = v2
 
-    /*
-    override fun hashCode(): Int {
-        val prime = 31
-        var result = 1
-        result = prime * result + (if (vertex1 == null) 0 else vertex1.hashCode())
-        result = prime * result + (if (vertex1 == null) 0 else vertex2.hashCode())
-        return result
-    }
-*/
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other == null) return false
@@ -123,14 +114,6 @@ class Vertex(var id: Int) {
         return edges
     }
 
-    /*
-    override fun hashCode(): Int {
-        val prime = 31
-        var result = 1
-        result = prime * result + (id xor (id ushr 32)).toInt()
-        return result
-    }
-*/
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other == null) return false
